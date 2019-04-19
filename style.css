@@ -1,0 +1,18 @@
+.btn,#submitButton{
+    background-color:rgb(8, 8, 59);
+    color:white;
+    margin:10px;
+    padding:10px;
+    border-radius: 10%;
+}
+#inputDiv{
+    float:right;
+    margin:5px;
+}
+input{
+    margin:10px 0;
+    padding:10px;
+}
+#submitButton{
+    margin-left:0;
+}
