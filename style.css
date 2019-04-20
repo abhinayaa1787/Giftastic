@@ -16,3 +16,24 @@ input{
 #submitButton{
     margin-left:0;
 }
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+{
+    body{
+        box-sizing:border-box;    
+
+    }
+    .btn,#submitButton{
+        width:80%;
+        font-size:1em;
+align-content:center;
+        }
+            #inputDiv{
+        font-size:1.5em;
+        width:100%;
+        float:left;
+    }
+    
+
+}
