@@ -1,11 +1,12 @@
-.btn,#submitButton{
-    background-color:rgb(8, 8, 59);
+.button,#submitButton{
+    background-color:rgb(60, 138, 138);
     color:white;
     margin:10px;
-    padding:10px;
+    padding:5px;
     border-radius: 10%;
 }
 #inputDiv{
+    width:25%;
     float:right;
     margin:5px;
 }
@@ -16,6 +17,24 @@ input{
 #submitButton{
     margin-left:0;
 }
+#gifImages{
+    /* display:inline; */
+    width:50%;
+}
+/* #favorites{
+     float:right;
+     marg
+} */
+.animalDiv{
+    position:relative;
+}
+.btn{
+    border:0;
+    position:absolute;
+    bottom:10px;
+    background-color:rgb(60, 138, 138);
+
+} 
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
@@ -23,15 +42,19 @@ input{
     #mobileDiv{
 text-align:center;
     }
-    .btn,#submitButton{
+    .button,#submitButton{
         width:80%;
         font-size:1em;
 align-content:center;
         }
-            #inputDiv{
+        #inputDiv{
         font-size:1.5em;
         width:100%;
         float:left;
+    }
+    #favorites,#gifImages{
+        width:100%;
+        text-align:center;
     }
     
 
