@@ -47,15 +47,18 @@ function gifAdd() {
           imageDiv.attr("src", result[i].images.original_still.url);
           imageDiv.attr("data-animate", result[i].images.original.url);
 
-          
           animalDiv.append(pTitle);
           animalDiv.append(p);
-          animalDiv.append("<button class='btn'><i class='fa fa-heart'></i></button>");
+          animalDiv.append("<button id='fav' class='btn'><i class='fa fa-heart'></i></button>");
+          /*Trying to add download functionality*/
+
+          // var aTag = $("<a id='download' class='btn' download><i class='fas fa-download' ></i> </a>")
+          // aTag.attr("href", result[i].images.original.url)
+          // animalDiv.append(aTag);
+
           animalDiv.append(imageDiv);
           imageDiv.on("click", function () {
             var gifState = $(this).attr("data-state");
-            // console.log(gifState);
-            // console.log($(this).attr("data-animate"));
             if (gifState === "still") {
               $(this).attr("src", $(this).attr("data-animate"));
               $(this).attr("data-state", "animate");
@@ -73,13 +76,20 @@ function gifAdd() {
       }
       $(".btn").on("click", function () {
         console.log("clicked");
-        var favGif = $("<img>");
-        favGif.attr("src",$(this).parent().find("img").attr("data-animate"));
-
-        // $(this).attr("src", $(this).attr("data-animate"));
-        $("#favorites").prepend(favGif);
+         var favGif = $("<img>").attr("src",$(this).parent().find("img").attr("data-animate"));
+         $("#favorites").prepend(favGif);
       });
-  
+
+  /*Download*/
+  // $("#download").on("click",function(){
+  //   console.log("clicked");
+  //   var dload;
+  //   dload.attr("href",$(this).parent().find('img').attr('data-animate'));
+  //   // dload.attr("download","");
+  // //  dload.html("<a href='$(this).parent().find('img').attr('data-animate'))' download>");
+  // //  animalDiv.append(dload);
+
+  // })
 
 
   });
